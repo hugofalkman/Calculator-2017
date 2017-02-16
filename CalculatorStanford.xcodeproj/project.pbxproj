@@ -12,6 +12,7 @@
 		B191B09D1E5476570003A32B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B191B09B1E5476570003A32B /* Main.storyboard */; };
 		B191B09F1E5476570003A32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B191B09E1E5476570003A32B /* Assets.xcassets */; };
 		B191B0A21E5476570003A32B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B191B0A01E5476570003A32B /* LaunchScreen.storyboard */; };
+		B191B0AB1E54BB610003A32B /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B191B0AA1E54BB610003A32B /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B191B09E1E5476570003A32B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B191B0A11E5476570003A32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B191B0A31E5476570003A32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B191B0AA1E54BB610003A32B /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				B191B0991E5476570003A32B /* ViewController.swift */,
 				B191B09B1E5476570003A32B /* Main.storyboard */,
+				B191B0AA1E54BB610003A32B /* CalculatorBrain.swift */,
 				B191B0A91E5478120003A32B /* Supporting Files */,
 			);
 			path = CalculatorStanford;
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B191B0AB1E54BB610003A32B /* CalculatorBrain.swift in Sources */,
 				B191B09A1E5476570003A32B /* ViewController.swift in Sources */,
 				B191B0981E5476570003A32B /* AppDelegate.swift in Sources */,
 			);
