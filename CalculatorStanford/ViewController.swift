@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         let digit = sender.currentTitle!
         if userIsTyping {
             let textInDisplay = display.text!
-            display.text = textInDisplay + digit
+            if digit != "." || !textInDisplay.contains(".") {
+                display.text = textInDisplay + digit
+            }
         } else {
             display.text = digit
             userIsTyping = true
