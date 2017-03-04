@@ -23,6 +23,16 @@ class ViewController: UIViewController {
     
     var userIsTyping = false
     
+    private var brain = CalculatorBrain()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        brain.addUnaryOperation(named: "✅") { [weak weakSelf = self] in
+            weakSelf?.display.textColor = UIColor.green
+            return sqrt($0)
+        }
+    }
+    
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         if userIsTyping {
@@ -35,8 +45,6 @@ class ViewController: UIViewController {
             userIsTyping = true
         }
     }
-    
-    private var brain = CalculatorBrain()
     
     @IBAction func performOp(_ sender: UIButton) {
         if userIsTyping {
