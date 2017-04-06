@@ -25,6 +25,25 @@ class ViewController: UIViewController {
     
     private var brain = CalculatorBrain()
     
+    private func showSizeClasses() {
+        if !userIsTyping {
+            display.textAlignment = .center
+            display.text = "width " + traitCollection.horizontalSizeClass.description + " height " + traitCollection.verticalSizeClass.description
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showSizeClasses()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { coordinator in
+            self.showSizeClasses()
+        }, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         brain.addUnaryOperation(named: "✅") { [weak weakSelf = self] in
@@ -58,6 +77,16 @@ class ViewController: UIViewController {
         
         if let result = brain.result {
             displayValue = result
+        }
+    }
+}
+
+extension UIUserInterfaceSizeClass: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .compact: return "Compact"
+        case .regular: return "Regular"
+        case .unspecified: return "??"
         }
     }
 }
